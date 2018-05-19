@@ -1,6 +1,6 @@
 import React from 'react';
 import KanbanBoard from './KanbanBoard';
-import ContactsApp from './ContactsApp';
+import ContactsAppContainer from './ContactsAppContainer';
 
 let cardsList = [ {
     id:1,
@@ -31,14 +31,6 @@ let cardsList = [ {
         ]
 }, ];
 
-let contacts = [
-    { name: "Cassio Zen", email: "cassiozen@gmail.com" },
-    { name: "Dan Abramov", email: "gaearon@somewhere.com" },
-    { name: "Pete Hunt", email: "floydophone@somewhere.com" },
-    { name: "Paul O’Shannessy", email: "zpao@somewhere.com" },
-    { name: "Ryan Florence", email: "rpflorence@somewhere.com" },
-    { name: "Sebastian Markbage", email: "sebmarkbage@here.com" },
-];
 
 
 class App extends React.Component {
@@ -48,7 +40,7 @@ class App extends React.Component {
 
         return(
             <div>
-                <ContactsApp contacts={contacts}/>
+                <ContactsAppContainer />
                 <KanbanBoard cards={cardsList}/>
             </div>
         );
