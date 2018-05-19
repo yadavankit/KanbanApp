@@ -72,10 +72,12 @@ ul {
 .card__title:before {
     display: inline-block;
     width: 1em;
+    color: red;
     content: ' \25BA';
 }
 
 .card__title--is-open:before {
+    color: green;
     content: ' \25BC';
 }
 
