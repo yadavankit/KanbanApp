@@ -6,10 +6,14 @@ class ContactList extends React.Component {
 
     render() {
 
+        let filteredContacts = this.props.contacts.filter(
+            (contact) => contact.name.toLowerCase().indexOf(this.props.filterText) !== -1
+         );
+
         return(
             <ul>
                 {
-                    this.props.contacts.map(
+                    filteredContacts.map(
                         (contact) => <ContactItem key={contact.email} name={contact.name} email={contact.email}/>
                     )
                 }
@@ -21,7 +25,8 @@ class ContactList extends React.Component {
 }
 
 ContactList.propTypes = {
-    contacts: PropTypes.arrayOf(PropTypes.object)
+    contacts: PropTypes.arrayOf(PropTypes.object),
+    filterText: PropTypes.string
 };
 
 export default ContactList;
