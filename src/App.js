@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import KanbanBoard from './KanbanBoard';
 
 let cardsList = [ {
@@ -34,7 +34,7 @@ let cardsList = [ {
 ];
 
 
-class App extends Component {
+class App extends React.Component {
 
 
     render() {
