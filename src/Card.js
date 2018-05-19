@@ -56,9 +56,22 @@ class Card extends React.Component {
 
 }
 
+//Custom PropType Validator for title prop (Checks if value is string, less than 80 char long)
+let titlePropType = (props, propName, componentName) => {
+    if (props[propName]) {
+        let value = props[propName];
+        if (typeof value !== 'string' || value.length > 80) {
+            return new Error(
+                `Prop named ${propName} in ${componentName} component is either not a string or is longer than 80 characters`
+            );
+        }
+    }
+
+};
+
 Card.propTypes = {
     id: PropTypes.number,
-    title: PropTypes.string,
+    title: titlePropType,
     description: PropTypes.string,
     tasks: PropTypes.arrayOf(PropTypes.object),
     color: PropTypes.string

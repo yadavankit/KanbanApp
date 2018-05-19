@@ -30,7 +30,20 @@ let cardsList = [ {
         name:"My own experiments",
         done:false
     }
-] },
+] }, {
+    id:3,
+    title: "I am really big fucking task and I challenge you to complete me, making sure am long enough to throw error",
+    description: "Foray into Machine Learning",
+    status: "done",
+    color: "#0C7489",
+    tasks: [
+        {
+            id:1,
+            name:"Learn React, Tensorflow",
+            done:true
+        }
+    ]
+},
 ];
 
 
