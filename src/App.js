@@ -1,6 +1,7 @@
 import React from 'react';
 import KanbanBoardContainer from './KanbanBoardContainer';
 import ContactsAppContainer from './ContactsAppContainer';
+import ShoppingList from './ShoppingList';
 
 
 class App extends React.Component {
@@ -12,6 +13,7 @@ class App extends React.Component {
             <div>
                 {/*<ContactsAppContainer />*/}
                 <KanbanBoardContainer />
+                {/*<ShoppingList />*/}
             </div>
         );
 
