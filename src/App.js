@@ -10,7 +10,7 @@ class App extends React.Component {
 
         return(
             <div>
-                <ContactsAppContainer />
+                {/*<ContactsAppContainer />*/}
                 <KanbanBoardContainer />
             </div>
         );
